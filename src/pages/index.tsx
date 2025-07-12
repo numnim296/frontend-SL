@@ -18,11 +18,11 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    const term = searchData.toLowerCase();
+    const dataUser = searchData.toLowerCase();
     setFilteredUsers(
       users.filter(
         (user) =>
-          user.name.toLowerCase().includes(term) || user.email.toLowerCase().includes(term),
+          user.name.toLowerCase().includes(dataUser) || user.email.toLowerCase().includes(dataUser),
       ),
     );
   }, [searchData, users]);
